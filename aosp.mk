@@ -16,6 +16,12 @@ AXION_CAMERA_FRONT_INFO := 8
 
 TARGET_ENABLE_BLUR := true
 
+# Camera
+PRODUCT_NO_CAMERA := false
+
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
