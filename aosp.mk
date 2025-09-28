@@ -5,7 +5,16 @@
 #
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+AXION_MAINTAINER := nothing404error
+AXION_PROCESSOR := Snapdragon_662
+AXION_CPU_SMALL_CORES := 0,1,2,3
+AXION_CPU_BIG_CORES := 4,5,6,7
+AXION_CAMERA_REAR_INFO := 48,2
+AXION_CAMERA_FRONT_INFO := 8
+
+TARGET_ENABLE_BLUR := true
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -49,5 +58,3 @@ GMS_VOICE_MODEL_INCLUDED := true
 # Dexpreopt
 WITH_DEXPREOPT_DEBUG_INFO := false
 
-# Disable debugging in userdebug builds
-PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG := true
